@@ -114,11 +114,11 @@ public class TechJobs {
             for (Map.Entry<String, String> item : job.entrySet()) {
                 String key = item.getKey();
                 String value = item.getValue();
-                System.out.println("key = " + key);
-                System.out.println("value = " + value);
+                System.out.println(key+": "+value);
+
             }
         }
-        if (no jobs){
+        if (someJobs.size() == 0){
             System.out.println("No jobs fit that criteria!");
         }
     }
