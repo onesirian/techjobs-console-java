@@ -28,6 +28,24 @@ public class JobData {
      * @param field The column to retrieve values from
      * @return List of all of the values of the given field
      */
+    public static ArrayList<HashMap<String,String>> findByValue(String value) {
+        // load data, if not already loaded
+        loadData();
+
+        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+
+        for (HashMap<String, String> row : allJobs) {
+
+            String aValue = row.get(value);
+
+            if (aValue.contains(value)) {
+                jobs.add(row);
+            }
+        }
+
+        return jobs;
+    }
+
     public static ArrayList<String> findAll(String field) {
 
         // load data, if not already loaded
