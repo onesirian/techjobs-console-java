@@ -111,12 +111,15 @@ public class TechJobs {
 
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         for (HashMap<String, String> job:someJobs) {
+
+            System.out.println("\n1*****");
             for (Map.Entry<String, String> item : job.entrySet()) {
                 String key = item.getKey();
                 String value = item.getValue();
                 System.out.println(key+": "+value);
-
             }
+            System.out.println("*****");
+
         }
         if (someJobs.size() == 0){
             System.out.println("No jobs fit that criteria!");
